@@ -1,0 +1,42 @@
+/* Hero image and centered logo refinements */
+.site-header{position:sticky;}
+.nav-inner{position:relative;}
+.brand{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);z-index:2;}
+.main-nav{position:absolute;left:0;top:50%;transform:translateY(-50%);width:calc(50% - 145px);}
+.main-nav ul{justify-content:flex-start;gap:clamp(12px,1.8vw,25px);white-space:nowrap;}
+.header-directions{position:absolute;right:0;top:50%;transform:translateY(-50%);}
+.header-directions:hover{transform:translateY(calc(-50% - 2px));}
+
+.hero{
+  background-image:
+    linear-gradient(90deg,rgba(27,14,10,.88) 0%,rgba(27,14,10,.73) 40%,rgba(27,14,10,.28) 100%),
+    url('https://images.pexels.com/photos/13741262/pexels-photo-13741262.jpeg');
+  background-size:cover;
+  background-position:center 55%;
+  background-repeat:no-repeat;
+}
+.hero:before{z-index:0;pointer-events:none;opacity:.1;}
+.hero-overlay{z-index:1;pointer-events:none;background:linear-gradient(90deg,rgba(25,13,9,.38),rgba(25,13,9,.05) 78%),linear-gradient(0deg,rgba(25,13,9,.32),transparent 44%);}
+.hero-content{z-index:2;}
+.hero-side-note,.scroll-cue{z-index:2;}
+
+@media(max-width:950px){
+  .main-nav{width:calc(50% - 115px);}
+  .main-nav ul{gap:10px;font-size:.7rem;}
+  .brand img{width:58px;height:58px;}
+  .brand-copy strong{font-size:1.05rem;}
+  .brand-copy small{font-size:.48rem;}
+}
+@media(max-width:700px){
+  .site-header{height:76px;}
+  .nav-inner{width:92%;}
+  .brand{left:50%;}
+  .brand img{width:50px;height:50px;}
+  .brand-copy strong{font-size:.98rem;}
+  .brand-copy small{font-size:.46rem;}
+  .menu-toggle{position:absolute;right:0;top:50%;transform:translateY(-50%);z-index:3;}
+  .main-nav{position:static;transform:none;width:auto;}
+  .main-nav ul{position:absolute;top:76px;left:-4.35%;right:-4.35%;width:auto;white-space:normal;}
+  .header-directions{display:none;}
+  .hero{background-position:58% center;}
+}
