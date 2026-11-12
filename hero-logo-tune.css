@@ -22,6 +22,9 @@
 /* Address is already shown in the card on the right; avoid repeating it in the left contact list. */
 .contact-details li:first-child{display:none;}
 
+/* Put the phone and opening hours in a compact info line on the hero banner. */
+.hero-buttons:after{content:"☎  0542 346 5827   ·   ◷  Her gün 11:00–02:00";display:block;flex-basis:100%;width:max-content;margin-top:8px;padding:9px 13px;border:1px solid rgba(224,197,143,.42);background:rgba(25,13,9,.42);color:var(--white);font-size:.78rem;letter-spacing:.025em;line-height:1.45;}
+
 @media(max-width:950px){
   .site-header{height:92px;}
   .brand img{width:68px;height:68px;flex-basis:68px;}
@@ -47,9 +50,11 @@
   .hero-content{padding-bottom:185px;}
   .hero-content>*{max-width:100%;}
   .hero-side-note{right:4%;bottom:22px;}
+  .hero-buttons:after{width:auto;max-width:100%;font-size:.7rem;padding:8px 10px;}
 }
 @media(max-width:380px){
   .brand img{width:48px;height:48px;flex-basis:48px;}
   .brand-copy strong{font-size:.9rem;}
   .hero:after{width:112px;right:6%;}
+  .hero-buttons:after{font-size:.64rem;letter-spacing:0;padding:7px 8px;}
 }
