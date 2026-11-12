@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 310 76" role="img" aria-labelledby="title desc">
+  <title id="title">Sultana Künefe &amp; Katmer</title>
+  <desc id="desc">Sultana Künefe ve Katmer için bordo ve altın renkli amblem ve yazı logosu</desc>
+  <circle cx="38" cy="38" r="34" fill="#b58a4a"/>
+  <circle cx="38" cy="38" r="29" fill="none" stroke="#24140f" stroke-width="1"/>
+  <path d="M49 24c-3-4-7-6-12-6-7 0-12 4-12 10 0 7 6 9 13 11 6 2 11 4 11 10 0 6-5 10-13 10-6 0-11-2-15-7" fill="none" stroke="#24140f" stroke-linecap="round" stroke-width="3.5"/>
+  <path d="M38 5v6M38 65v6M5 38h6M65 38h6" stroke="#24140f" stroke-width="1.5"/>
+  <text x="84" y="39" fill="#f8f2e7" font-family="Georgia,serif" font-size="31" font-weight="600" letter-spacing="1">SULTANA</text>
+  <text x="86" y="59" fill="#c9a76e" font-family="Arial,sans-serif" font-size="10" letter-spacing="3.2">KÜNEFE &amp; KATMER</text>
+</svg>
