@@ -1,4 +1,4 @@
-/* Header logo: restore the original left position and center the supplied badge in its frame. */
+/* Restore the header logo to the left and center it in its badge. */
 .site-header{height:104px;}
 .nav-inner{position:relative;justify-content:space-between;}
 .brand{position:relative;left:auto;top:auto;transform:none;z-index:auto;display:flex;align-items:center;gap:12px;}
@@ -10,50 +10,25 @@
 .header-directions{position:static;right:auto;top:auto;transform:none;}
 .header-directions:hover{transform:translateY(-2px);}
 
-/* Hero banner: food photo with the logo as a feature. */
-.hero{position:relative;}
+/* Hero photo and logo feature. */
+.hero{position:relative;background-image:linear-gradient(90deg,rgba(27,14,10,.88) 0%,rgba(27,14,10,.73) 40%,rgba(27,14,10,.28) 100%),url('https://images.pexels.com/photos/13741262/pexels-photo-13741262.jpeg');background-size:cover;background-position:center 55%;background-repeat:no-repeat;}
 .hero:after{content:"";position:absolute;z-index:2;right:max(7%,calc((100vw - 1160px)/2 + 28px));top:50%;width:clamp(190px,23vw,310px);aspect-ratio:1/1;transform:translateY(-50%);background:url('logo.png') center/contain no-repeat;filter:drop-shadow(0 18px 34px rgba(0,0,0,.42));pointer-events:none;}
-.hero-content{z-index:3;max-width:1160px;margin-left:auto;margin-right:auto;}
+.hero:before{z-index:0;pointer-events:none;opacity:.1;}
+.hero-overlay{z-index:1;pointer-events:none;background:linear-gradient(90deg,rgba(25,13,9,.38),rgba(25,13,9,.05) 78%),linear-gradient(0deg,rgba(25,13,9,.32),transparent 44%);}
+.hero-content{position:relative;z-index:3;max-width:1160px;margin-left:auto;margin-right:auto;padding:100px 0 120px;}
 .hero-content>*{max-width:min(720px,68%);}
-.hero-overlay{z-index:1;}
-.hero:before{z-index:0;}
 .hero-side-note,.scroll-cue{z-index:3;}
-
-/* Keep order phone and hours only in the prominent first-screen banner. */
-.contact-details{display:none!important;}
-.address-card .hours{display:none!important;}
-.hero-buttons:after{content:"☎  SİPARİŞ HATTI\A0542 346 5827\A\A◷  HER GÜN 11:00–02:00";display:block;flex-basis:100%;width:max-content;margin-top:8px;padding:12px 18px;border:1px solid rgba(224,197,143,.55);background:rgba(25,13,9,.62);color:var(--white);font-size:.8rem;font-weight:600;letter-spacing:.045em;line-height:1.55;white-space:pre-line;box-shadow:0 8px 24px rgba(0,0,0,.16);}
-
-@media(max-width:950px){
-  .site-header{height:92px;}
-  .brand img{width:68px;height:68px;flex-basis:68px;}
-  .brand-copy strong{font-size:1.12rem;}
-  .brand-copy small{font-size:.5rem;}
-  .main-nav ul{gap:10px;font-size:.7rem;}
-  .hero:after{right:4%;width:clamp(160px,24vw,230px);}
-  .hero-content>*{max-width:70%;}
-}
-@media(max-width:700px){
-  .site-header{height:76px;}
-  .nav-inner{width:92%;}
-  .brand{gap:8px;}
-  .brand img{width:54px;height:54px;flex-basis:54px;border-width:1px;}
-  .brand-copy strong{font-size:.98rem;}
-  .brand-copy small{font-size:.46rem;}
-  .menu-toggle{position:relative;right:auto;top:auto;transform:none;margin-left:auto;}
-  .main-nav{position:static;transform:none;width:auto;}
-  .main-nav ul{position:absolute;top:76px;left:-4.35%;right:-4.35%;width:auto;white-space:normal;}
-  .header-directions{display:none;}
-  .hero{background-position:58% center;}
-  .hero:after{width:clamp(116px,34vw,165px);right:5%;top:auto;bottom:22px;transform:none;}
-  .hero-content{padding-bottom:185px;}
-  .hero-content>*{max-width:100%;}
-  .hero-side-note{right:4%;bottom:22px;}
-  .hero-buttons:after{width:max-content;max-width:100%;font-size:.7rem;padding:9px 12px;}
-}
-@media(max-width:380px){
-  .brand img{width:48px;height:48px;flex-basis:48px;}
-  .brand-copy strong{font-size:.9rem;}
-  .hero:after{width:112px;right:6%;}
-  .hero-buttons:after{font-size:.64rem;letter-spacing:.015em;padding:8px 10px;}
-}
+.hero-order-info{position:relative;z-index:3;display:flex;align-items:center;flex-wrap:wrap;gap:12px 24px;margin-top:24px;}
+.hero-order-phone{display:inline-flex;align-items:center;gap:13px;padding:12px 20px;border:1px solid rgba(224,197,143,.72);border-radius:7px;background:linear-gradient(135deg,#d9b777,#c49b58);color:#24140f;box-shadow:0 10px 28px rgba(0,0,0,.24);transition:transform .2s,box-shadow .2s;}
+.hero-order-phone:hover{transform:translateY(-3px);box-shadow:0 14px 32px rgba(0,0,0,.32);}
+.hero-order-phone>span{font-size:1.5rem;}
+.hero-order-phone>span+span{display:flex;flex-direction:column;line-height:1.2;}
+.hero-order-phone small{font-size:.62rem;font-weight:800;letter-spacing:.14em;}
+.hero-order-phone strong{font-size:1.22rem;letter-spacing:.035em;}
+.hero-order-hours{display:flex;align-items:center;gap:8px;color:#fff8e9;font-size:.95rem;font-weight:600;text-shadow:0 1px 5px rgba(0,0,0,.45);}
+.whatsapp-float{position:fixed;right:24px;bottom:24px;z-index:50;display:inline-flex;align-items:center;gap:10px;padding:14px 19px;border:1px solid rgba(255,255,255,.32);border-radius:999px;background:#1fa855;color:#fff;font-size:.9rem;font-weight:700;letter-spacing:.01em;box-shadow:0 8px 26px rgba(0,0,0,.28);transition:transform .2s,box-shadow .2s,background .2s;}
+.whatsapp-float:hover{transform:translateY(-3px);background:#178d46;box-shadow:0 12px 30px rgba(0,0,0,.34);}
+.whatsapp-icon{font-size:1.3rem;line-height:1;}
+@media(max-width:950px){.site-header{height:92px;}.brand img{width:68px;height:68px;flex-basis:68px;}.brand-copy strong{font-size:1.12rem;}.brand-copy small{font-size:.5rem;}.main-nav ul{gap:10px;font-size:.7rem;}.hero:after{right:4%;width:clamp(160px,24vw,230px);}.hero-content>*{max-width:70%;}}
+@media(max-width:700px){.site-header{height:76px;}.nav-inner{width:92%;}.brand{gap:8px;}.brand img{width:54px;height:54px;flex-basis:54px;border-width:1px;}.brand-copy strong{font-size:.98rem;}.brand-copy small{font-size:.46rem;}.menu-toggle{position:relative;right:auto;top:auto;transform:none;margin-left:auto;}.main-nav{position:static;transform:none;width:auto;}.main-nav ul{position:absolute;top:76px;left:-4.35%;right:-4.35%;width:auto;white-space:normal;}.header-directions{display:none;}.hero{background-position:58% center;}.hero:after{width:clamp(116px,34vw,165px);right:5%;top:auto;bottom:22px;transform:none;}.hero-content{padding:74px 0 190px;}.hero-content>*{max-width:100%;}.hero-order-info{align-items:flex-start;flex-direction:column;gap:11px;margin-top:20px;}.hero-order-phone{padding:10px 15px;}.hero-order-phone strong{font-size:1.1rem;}.hero-order-hours{font-size:.85rem;}.whatsapp-float{right:14px;bottom:14px;padding:13px 16px;font-size:.82rem;}}
+@media(max-width:380px){.brand img{width:48px;height:48px;flex-basis:48px;}.brand-copy strong{font-size:.9rem;}.hero:after{width:112px;right:6%;}.hero-order-phone strong{font-size:1rem;}.whatsapp-float{right:10px;bottom:10px;padding:12px 14px;font-size:.76rem;}}
