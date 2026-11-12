@@ -10,7 +10,7 @@
 .header-directions{position:static;right:auto;top:auto;transform:none;}
 .header-directions:hover{transform:translateY(-2px);}
 
-/* Hero banner: retain the food photo and add the supplied brand badge as a feature. */
+/* Hero banner: food photo with the logo as a feature. */
 .hero{position:relative;}
 .hero:after{content:"";position:absolute;z-index:2;right:max(7%,calc((100vw - 1160px)/2 + 28px));top:50%;width:clamp(190px,23vw,310px);aspect-ratio:1/1;transform:translateY(-50%);background:url('logo.png') center/contain no-repeat;filter:drop-shadow(0 18px 34px rgba(0,0,0,.42));pointer-events:none;}
 .hero-content{z-index:3;max-width:1160px;margin-left:auto;margin-right:auto;}
@@ -19,11 +19,10 @@
 .hero:before{z-index:0;}
 .hero-side-note,.scroll-cue{z-index:3;}
 
-/* Address is already shown in the card on the right; avoid repeating it in the left contact list. */
-.contact-details li:first-child{display:none;}
-
-/* Put the phone and opening hours in a compact info line on the hero banner. */
-.hero-buttons:after{content:"☎  0542 346 5827   ·   ◷  Her gün 11:00–02:00";display:block;flex-basis:100%;width:max-content;margin-top:8px;padding:9px 13px;border:1px solid rgba(224,197,143,.42);background:rgba(25,13,9,.42);color:var(--white);font-size:.78rem;letter-spacing:.025em;line-height:1.45;}
+/* Keep order phone and hours only in the prominent first-screen banner. */
+.contact-details{display:none!important;}
+.address-card .hours{display:none!important;}
+.hero-buttons:after{content:"☎  SİPARİŞ HATTI\A0542 346 5827\A\A◷  HER GÜN 11:00–02:00";display:block;flex-basis:100%;width:max-content;margin-top:8px;padding:12px 18px;border:1px solid rgba(224,197,143,.55);background:rgba(25,13,9,.62);color:var(--white);font-size:.8rem;font-weight:600;letter-spacing:.045em;line-height:1.55;white-space:pre-line;box-shadow:0 8px 24px rgba(0,0,0,.16);}
 
 @media(max-width:950px){
   .site-header{height:92px;}
@@ -50,11 +49,11 @@
   .hero-content{padding-bottom:185px;}
   .hero-content>*{max-width:100%;}
   .hero-side-note{right:4%;bottom:22px;}
-  .hero-buttons:after{width:auto;max-width:100%;font-size:.7rem;padding:8px 10px;}
+  .hero-buttons:after{width:max-content;max-width:100%;font-size:.7rem;padding:9px 12px;}
 }
 @media(max-width:380px){
   .brand img{width:48px;height:48px;flex-basis:48px;}
   .brand-copy strong{font-size:.9rem;}
   .hero:after{width:112px;right:6%;}
-  .hero-buttons:after{font-size:.64rem;letter-spacing:0;padding:7px 8px;}
+  .hero-buttons:after{font-size:.64rem;letter-spacing:.015em;padding:8px 10px;}
 }
