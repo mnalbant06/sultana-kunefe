@@ -19,6 +19,9 @@
 .hero:before{z-index:0;}
 .hero-side-note,.scroll-cue{z-index:3;}
 
+/* Address is already shown in the card on the right; avoid repeating it in the left contact list. */
+.contact-details li:first-child{display:none;}
+
 @media(max-width:950px){
   .site-header{height:92px;}
   .brand img{width:68px;height:68px;flex-basis:68px;}
